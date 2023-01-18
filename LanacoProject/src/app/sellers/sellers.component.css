@@ -1,0 +1,18 @@
+.table{
+  margin-top: 170px;
+  width: 60%;
+  position: fixed;
+  left: 300px;
+  top: 00px;
+}
+
+.manual4{
+  margin-top: 15px;
+  height: 4%;
+  width: 2.5%;
+  position: fixed;
+  left: 44px;
+  top: 159px;
+  font-size: 22px;
+  text-align: center
+}

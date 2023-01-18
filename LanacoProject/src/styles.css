@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/ag-grid-community/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/styles/ag-theme-alpine.css";
+@import '~ngx-toastr/toastr';
+
+body {
+  background-color:rgb(188, 234, 218);
+}
+
+.manual{
+  margin-top: 15px;
+  height: 4%;
+  width: 10%;
+  position: fixed;
+  left: 733px;
+  top: 00px;
+  font-size: 22px;
+  text-align: center
+}
+
+.manual2{
+  margin-top: 70px;
+  height: 4%;
+  width: 70%;
+  position: fixed;
+  left: 270px;
+  top: 00px;
+ }
+
+
+
+

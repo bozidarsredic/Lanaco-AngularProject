@@ -1,0 +1,12 @@
+  <input value="CUSTOMERS"  [disabled]="true"  class="manual"   >
+  <input value=" "  [disabled]="true"  class="manual5" >
+  <ag-grid-angular
+  style="width: 700px; height: 500px; margin-top: 50px;  margin-left: 460px;"  class="ag-theme-alpine"
+  [columnDefs]="colDefs"
+  [defaultColDef]="defaultColDef"
+  [rowData]="customers"
+  [rowSelection]="'single'"
+
+  [animateRows]="true"
+  (cellClicked)="onCellClicked($event)"
+></ag-grid-angular>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color :rgb(188, 234, 218);
+        }
+
+        nav {
+            position: fixed;
+            height: 150px;
+            left: 40px;
+            top: -500px;
+            bottom: 0;
+            margin: auto 0;
+            background-color: #fefefe;
+            padding: 20px 10px;
+            border-radius: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-flow: column;
+            height: 100%;
+        }
+
+        nav ul li {
+            width: 100%;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1a2238;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.2s all ease;
+        }
+
+        nav ul li a svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        nav ul li a span {
+            position: absolute;
+            background-color: #fefefe;
+            padding: 2px 15px;
+            border-radius: 30px;
+            margin-left: 10px;
+            font-weight: 500;
+            font-size: 15px;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.2s all ease;
+        }
+
+        nav ul li a.active span,
+        nav ul li a:hover span {
+            opacity: 1;
+            visibility: visible;
+            margin-left: 50px;
+        }
+
+
+      .button3 {
+        margin-top: -80px;
+        margin-left: 1000px;
+        width: 8%;
+        height: 60px;
+        background-color: red;
+      }
+
+        .button2 {
+
+        margin-top: 80px;
+        margin-left: 120px;
+        width: 8%;
+        height: 60px;
+        background-color: #008CBA;
+
+        }
+
+        .button11 {
+
+        margin-top: 80px;
+        margin-left: 500px;
+        width: 8%;
+        height: 60px;
+        background-color: green;
+
+        }
+
+   </style>
+
+</head>
+<body>
+ <button class="button11  btn btn-success  btn-lg gradient-custom-4 text-body  " [routerLink]="['/createCustomer']">CREATE</button>
+ <button  class="button2  btn btn-success  btn-lg gradient-custom-4 text-body  "  [disabled]="getEnable()" (click)=update()   >UPDATE</button>
+ <button class=" button3 btn btn-success  btn-lg gradient-custom-4 text-body "  [disabled]="getEnable()" [routerLink]="['/delete']">DELETE</button>
+
+    <nav id="menuBar"  >
+        <ul>
+            <li>
+              <a [routerLink]="['invoices']">
+                    <svg   viewBox="0 0 20 20" ><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" /></svg>
+                    <span>Invoices</span>
+                </a>
+            </li>
+            <li>
+              <a [routerLink]="['sellers']">
+                    <svg viewBox="0 0 20 20" ><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+                    <span>Sellers</span>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['customers']">
+
+                    <svg    viewBox="0 0 20 20" ><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" /></svg>
+                  <span>Customers</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
+<router-outlet >
+</router-outlet>
+
+
+
+
+
+
+
+
+
